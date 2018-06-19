@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+   <description></description>
+   <name>jira-api-tests-with-katalon-studio</name>
+   <tag></tag>
+   <UUID>252b8d9a-419e-4612-8c3a-1ffef49172ee</UUID>
+   <migratedVersion>5.4.0</migratedVersion>
+   <pageLoadTimeout>0</pageLoadTimeout>
+</Project>
