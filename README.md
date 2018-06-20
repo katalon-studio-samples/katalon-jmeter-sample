@@ -10,10 +10,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them
 
-```
-	- [Katalon Studio](https://www.katalon.com/)
- 	- Permission access to Jira System (provided in the sample code)
-```
+- [Katalon Studio](https://www.katalon.com/)
+- Permission access to Jira System (provided in the sample code)
 
 ### Installing
 
