@@ -22,7 +22,7 @@ Step 1:
 	- Check out the code from this .git
 
 Step 2:
-	- Open [Katalon Studio](https://www.katalon.com/)[Katalon Studio
+	- Open Katalon Studio
 	- Open the project from Katalon Studio
 
 Step 3:
