@@ -1,10 +1,10 @@
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import groovy.json.JsonSlurper as JsonSlurper
 
-import groovy.json.JsonSlurper
+response = WS.sendRequest(findTestObject('api-2-search/Search issues/Search issues by issue key as parameter', [('issue_key'):issue_key]))
 
-response = WS.sendRequest(findTestObject('Simple Examples/api-2-issue/Get issue/Get issue with specified key as parameter in URL'))
 WS.verifyResponseStatusCode(response, 200)
+
 return response
 

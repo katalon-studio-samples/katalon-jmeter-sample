@@ -19,7 +19,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-def response = WebUI.callTestCase(findTestCase('api-2-issue/Get issue/I use API to get the issue information'), [:], FailureHandling.STOP_ON_FAILURE)
+def response = WebUI.callTestCase(findTestCase('api-2-issue/Get issue/I use API to get the issue information'), [('issue_key'):issue_key], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('api-2-issue/Get issue/I could get correct information of the issue'), [('response') : response
         , ('project_key') : 'KD', ('issue_type') : 'Bug', ('priority') : 'Low', ('summary') : 'Ticket created at 1528442112968'

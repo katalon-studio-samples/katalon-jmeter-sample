@@ -5,4 +5,11 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>23b01bdc-2bb7-475d-a45c-a6c9394ee4fa</testCaseGuid>
+   <variable>
+      <defaultValue>'KD-1'</defaultValue>
+      <description></description>
+      <id>9df3ea07-7015-4f60-a53e-e78509f348fe</id>
+      <masked>false</masked>
+      <name>issue_key</name>
+   </variable>
 </TestCaseEntity>
