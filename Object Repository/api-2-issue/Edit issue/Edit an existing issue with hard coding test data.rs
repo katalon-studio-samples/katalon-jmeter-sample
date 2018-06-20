@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>Search issues by jql</name>
+   <name>Edit an existing issue with hard coding test data</name>
    <tag></tag>
-   <elementGuidId>3d375387-c85d-4e5b-b638-c84b85762608</elementGuidId>
+   <elementGuidId>8a43222e-905d-405f-ac92-4a9f26776a9e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;jql\&quot;: \&quot;issueKey \u003d KD-49\&quot;,\n    \&quot;startAt\&quot;: 0,\n    \&quot;maxResults\&quot;: 15,\n    \&quot;fields\&quot;: [\n        \&quot;summary\&quot;,\n        \&quot;status\&quot;,\n        \&quot;assignee\&quot;\n    ]\n}\n&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;update\&quot;:{\n    \&quot;summary\&quot;:[{\n      \&quot;set\&quot;:\&quot;${summary}\&quot;\n    }]\n  }\n}&quot;,
+  &quot;contentType&quot;: &quot;text/plain&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
    <httpBodyType>text</httpBodyType>
@@ -18,7 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>application/json</value>
+      <value>text/plain</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,8 +28,8 @@
       <value>Basic dHJvbmdidWlAa21zLXRlY2hub2xvZ3kuY29tOkJBR1J5QWZ1UmV2dTB4clhkclpMNkVDRA==</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://katalon.atlassian.net/rest/api/2/search</restUrl>
+   <restRequestMethod>PUT</restRequestMethod>
+   <restUrl>https://katalon.atlassian.net/rest/api/2/issue/KD-1</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

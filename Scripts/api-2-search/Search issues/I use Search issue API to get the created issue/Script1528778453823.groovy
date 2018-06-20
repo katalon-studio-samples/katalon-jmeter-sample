@@ -19,5 +19,5 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-def response = WS.sendRequest(findTestObject('api-2-search/Search issues/Search issues by issue key', [('issue_key') : issue_key]))
+def response = WS.sendRequest(findTestObject('Simple Examples/api-2-search/Search issues/Search issues by issue key', [('issue_key') : issue_key]))
 return response

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>Creat an issue using a project key and field names</name>
+   <name>Add a new comment into an existing issue using parameter</name>
    <tag></tag>
-   <elementGuidId>3ee1088e-4af1-47b0-bab5-9c1cb85b8df7</elementGuidId>
+   <elementGuidId>8c4e6ffa-5f05-4d3f-bb88-dfec3ea2c9b4</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;fields\&quot;: {\n       \&quot;project\&quot;:\n       { \n          \&quot;key\&quot;: \&quot;KD\&quot;\n       },\n       \&quot;summary\&quot;: \&quot;REST - Create new issue using API\&quot;,\n       \&quot;description\&quot;: \&quot;Creating of an issue using project keys and issue type names using the REST API\&quot;,\n       \&quot;issuetype\&quot;: {\n          \&quot;name\&quot;: \&quot;Story\&quot;\n       },\n       \&quot;priority\&quot;:{\n          \&quot;name\&quot;: \&quot;High\&quot;\n       }\n   }\n}&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;body\&quot;: \&quot;This is a new comment added by API\&quot;\n}&quot;,
+  &quot;contentType&quot;: &quot;text/plain&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
    <httpBodyType>text</httpBodyType>
@@ -29,7 +29,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://katalon.atlassian.net/rest/api/2/issue/</restUrl>
+   <restUrl>https://katalon.atlassian.net/rest/api/2/issue/KD-1/comment</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

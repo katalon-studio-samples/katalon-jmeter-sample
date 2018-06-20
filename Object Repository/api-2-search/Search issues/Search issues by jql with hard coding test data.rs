@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>Search issues by project code</name>
+   <name>Search issues by jql with hard coding test data</name>
    <tag></tag>
-   <elementGuidId>e8ad6527-8bf4-4305-b742-b027bab8b655</elementGuidId>
+   <elementGuidId>5330776f-e80d-49ef-ae20-4aa64558f731</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;jql\&quot;: \&quot;project \u003d ${project-code}\&quot;,\n    \&quot;startAt\&quot;: 0,\n    \&quot;maxResults\&quot;: 15,\n    \&quot;fields\&quot;: [\n        \&quot;summary\&quot;,\n        \&quot;status\&quot;,\n        \&quot;assignee\&quot;\n    ]\n}\n\n&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;jql\&quot;: \&quot;issueKey \u003d KD-49\&quot;,\n    \&quot;startAt\&quot;: 0,\n    \&quot;maxResults\&quot;: 15,\n    \&quot;fields\&quot;: [\n        \&quot;summary\&quot;,\n        \&quot;status\&quot;,\n        \&quot;assignee\&quot;\n    ]\n}\n&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
