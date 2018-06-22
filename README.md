@@ -27,13 +27,6 @@ Step 2:
 
 Step 3:
 	- Update configuration for integration: Jira, Katalon Analytics
-
-Step 4: 
-	- Update Jira account information at Profiles with following key 		
-		- url
-		- username
-		- encrypted_password
-		- element_timeout
 ```
 
 ## Running the tests
