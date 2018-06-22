@@ -32,6 +32,20 @@ Step 3:
 ## Running the tests
 
 Explain how to run the automated tests for this system
+The example in this project has 2 parts: Simple examples and Advance examples.
+
+### Simple examples
+Executing test cases in the Simple examples is simple:
+- Select the test case
+- Click the Run button
+
+### Advance examples
+Executing test cases in the Advance examples is a bit more complex
+- Select the test case under EXECUTABLE folder. The tests under DO NOT RUN folder are test cases for reuse purpose only and are not actual test cases.
+- Click the Run button
+
+### Object Repository
+Webservice Object at the Object Repository can be executed with its hard coding test data. Those object having test data as parameters cannot be executed correctly.
 
 ### Break down into end to end tests
 
