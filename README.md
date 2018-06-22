@@ -39,10 +39,30 @@ Executing test cases in the Simple examples is simple:
 - Select the test case
 - Click the Run button
 
+Test cases at this section help users understanding:
+- How to create simple API testing with hard coding test data
+- How to create a RESTful Web service object at Object Repository with different method: 
+  - GET
+  - POST
+  - PUT
+  - DELETE
+- How to use simple built-in keywords to 
+  - Send request
+  - Verify response code
+  - Verify response information
+
+
 ### Advance examples
 Executing test cases in the Advance examples is a bit more complex
 - Select the test case under EXECUTABLE folder. The tests under DO NOT RUN folder are test cases for reuse purpose only and are not actual test cases.
 - Click the Run button
+
+Test cases at this section help users understanding:
+- How to create RESTful Web services object at Object Repository with parameters so that it can be tested with different data set using data-driven approach
+- How to create test cases that can be reused in different test scenario
+- How to create test cases with BDD mindset
+- How to use built-in keywords together with extended scripts such as assertj to verify the response information.
+- How to group API end-points
 
 ### Object Repository
 Webservice Object at the Object Repository can be executed with its hard coding test data. Those object having test data as parameters cannot be executed correctly.
