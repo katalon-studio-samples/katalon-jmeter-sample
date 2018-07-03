@@ -14,7 +14,7 @@ These instructions will get you a copy of the project up and running on your loc
 - [Check out](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) the code from this .git
 - [Open the project](https://docs.katalon.com//display/KD/Manage+Test+Project) from Katalon Studio
 ### Executing a Test Case     
-![Execute a simple test case](https://github.com/katalon-studio-samples/jira-ui-tests/blob/master/Tutorials/Figures/Execute%20a%20simple%20test%20case.png?raw=true)
+![Execute a simple test case](https://github.com/katalon-studio-samples/jira-api-tests/blob/master/Tutorials/Figures/Executing%20a%20test%20case.png?raw=true)
 1. Expand the Test Cases structure, where all the test cases are stored.
 2. Select the test case you want to execute
 3. Choose the browser for executing the test case
