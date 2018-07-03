@@ -37,10 +37,10 @@ Below is the list of all the available test cases in this project relating to th
         As a Jira user, I would like to be able to create a new issue with defined information via web service, so that I could manage my issues without logging in Jira web application
      
       Feature: Create issue
-	 Scenario: Create issue with defined information successfully
-	 Given The web serice is available
-	 When I send a request to create issue with defined information
-	 Then The issue is created successfully in the system
+          Scenario: Create issue with defined information successfully
+	    Given The web serice is available
+	    When I send a request to create issue with defined information
+	    Then The issue is created successfully in the system
 	 
 ### Simple examples
 Test cases at this section help users understanding:
