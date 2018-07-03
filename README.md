@@ -35,13 +35,34 @@ Below is the list of all the available test cases in this project relating to th
 ### Story: Create issue with defined information
     User story
         As a Jira user, I would like to be able to create a new issue with defined information via web service, so that I could manage my issues without logging in Jira web application
-	
-	Feature: Create issue
+     
+      Feature: Create issue
 	 Scenario: Create issue with defined information successfully
 	 Given The web serice is available
 	 When I send a request to create issue with defined information
 	 Then The issue is created successfully in the system
 	 
+### Simple examples
+Test cases at this section help users understanding:
+- How to create simple API testing with hard coding test data
+- How to create a RESTful Web service object at Object Repository with different method: 
+  - GET
+  - POST
+  - PUT
+  - DELETE
+- How to use simple built-in keywords to 
+  - Send request
+  - Verify response code
+  - Verify response information
+
+### Advance examples
+Test cases at this section help users understanding:
+- How to create RESTful Web services object at Object Repository with parameters so that it can be tested with different data set using data-driven approach
+- How to create test cases that can be reused in different test scenario
+- How to create test cases with BDD mindset
+- How to use built-in keywords together with extended scripts such as assertj to verify the response information.
+- How to group API end-points	 
+    	
     	
 
 
