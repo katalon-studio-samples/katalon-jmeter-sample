@@ -19,6 +19,30 @@ These instructions will get you a copy of the project up and running on your loc
 2. Select the test case you want to execute
 3. Choose the browser for executing the test case
 
+At the end of this README, you will find additional ways to execute automation test cases.
+## Test Scenarios
+Below is the list of all the available test cases in this project relating to the test scenarios as described. Simply select the test case you want to run in Katalon Studio and execute accordingly. You can also make additional changes in these test cases to get familiar with automation testing and specifically Katalon Studio. 
+### Story: Get issue's information feature
+    User story
+        As a Jira user, I would like to be able to get issue's information via web service, so that I could get the data without logging in Jira web application.
+     
+     Feature: Get issue's information 
+         Scenario: Get issue's information successfully
+          Given The web service is available
+          When I send a request to get issue's formation
+          Then I could get the issue's information from the response
+
+### Story: Create issue with defined information
+    User story
+        As a Jira user, I would like to be able to create a new issue with defined information via web service, so that I could manage my issues without logging in Jira web application
+	
+	Feature: Create issue
+	 Scenario: Create issue with defined information successfully
+	 Given The web serice is available
+	 When I send a request to create issue with defined information
+	 Then The issue is created successfully in the system
+	 
+    	
 
 
 
