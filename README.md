@@ -1,6 +1,27 @@
-# katalon-studio-samples
-## JIRA API TESTS
-The **jira-api-tests** is a testing project with examples of performing API functional automation test on JIRA Web Application using Katalon Studio. The examples in this project are various from simple to advance tests:
+# Katalon Studio Samples: Jira API Tests
+Katalon Studio is a free and easy-to-use automated functional and regression testing platform. It provides users the ability to implement full automated testing solutions for their application projects with minimal engineering and programming skill requirements.
+______
+The **jira-api-tests** perform API automation test on Jira Web Application using Katalon Studio. The examples in this project range from common to advanced test cases.
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine.
+### Prerequisites
+- [Katalon Studio](https://www.katalon.com/) - [Installation and Setup](https://docs.katalon.com/x/HwAM)
+- Permission access to [Jira System](https://katalon.atlassian.net) (provided in the sample code)
+- Application Under Test (AUT):
+     + Jira cloud: https://katalon.atlassian.net/
+     + Account: trongbui@kms-technology.com/BAGRyAfuRevu0xrXdrZL6ECD
+### Setting Up
+- [Check out](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) the code from this .git
+- [Open the project](https://docs.katalon.com//display/KD/Manage+Test+Project) from Katalon Studio
+### Executing a Test Case     
+
+
+
+
+
+
+
+
 
 ## Getting Started
 
