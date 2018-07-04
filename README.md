@@ -66,7 +66,7 @@ Additionally, the users can try more advanced test cases and modify as they need
 - How to group API end-points	 
 ## Advanced Execution 
 ### Execute an Advanced Test Case
- ![Execute an advance test case](https://github.com/katalon-studio-samples/jira-ui-tests/blob/master/Tutorials/Figures/Execute%20an%20advance%20test%20case.png?raw=true)
+ ![Execute an advance test case](https://github.com/katalon-studio-samples/jira-api-tests/blob/master/Tutorials/Figures/Execute%20an%20advance%20test%20case.png?raw=true)
  The advance test cases in this example repository demonstrate how to set up the test project with Page Object Design Pattern approach to reduce the maintenance cost as well as increase the reusability of testing scripts.
 1. Tests is the place where actual test cases are stored and executed.
 2. Pages is the place where Page Objects are stored in Test case format. They could not be executed.
