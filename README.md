@@ -77,22 +77,16 @@ Additionally, the users can try more advanced test cases and modify as they need
  This example demonstrates how to apply data-driven approach to test execution with Katalon Studio. 
 1. Select the test suite
 2. Select the test case you want to apply data-driven approach
-3. Click Show/Hide Data Binding to open Test Data and Variable Binding feature for the selected test case
-4. Add an Data Files item containing test data used in the test
-5. Data Files structure, where all the data files are stored. These data files can be created from external Excel files, CSV files, or from the result of a database query.
-6. Variables and Data are binding
-7. Choose the browser for executing the test suite
+3. Select data file
+7. Bind test data and test case's parameters
  
- ### Execute a Test Suite Collection
- ![Execute a test suite collection](https://github.com/katalon-studio-samples/jira-api-tests/blob/master/Tutorials/Figures/Execute%20a%20test%20suite.png?raw=true)
+ ### Execute a Test Suite
+ ![Execute a test collection](https://github.com/katalon-studio-samples/jira-api-tests/blob/master/Tutorials/Figures/Execute%20a%20test%20suite.png?raw=true)
  This example demonstrates how to execute a test suite collection.
-1. Expand the Test Suites structure and select the test suite collection you want to execute
-2. Test suite lists in the selected collection. 
-3. A browser type is selected for each test suite in the collection
-4. A execution profile is selected for each test suite in the collection
-5. Execution mode. You can set to execute the test suite collection in Sequential or Parallel modes.
-6. Execute the test suite collection with defined configuration.
- 
+1. Select the Test suite
+2. Add test cases into the test suite 
+3. Execute the test suite
+
 ## See Also
 Update configurations for integration: [Jira](https://docs.katalon.com/x/7oEw), [Katalon Analytics](https://docs.katalon.com/x/KRhO)
 
