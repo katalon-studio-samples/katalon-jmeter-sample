@@ -14,15 +14,49 @@
       <matchCondition>equals</matchCondition>
       <name>Authorization</name>
       <type>Main</type>
-      <value>Basic dHJvbmdidWlAa21zLXRlY2hub2xvZ3kuY29tOkJBR1J5QWZ1UmV2dTB4clhkclpMNkVDRA==</value>
+      <value>${authorization}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>https://katalon.atlassian.net/rest/api/2/issue/KD-1?filter=issueTypes</restUrl>
+   <restUrl>https://katalon.atlassian.net/rest/api/2/issue/KD-1?expand=names&amp;fields=summary,status,issuetype,assignee,project,priority,description&amp;=</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
+   <variables>
+      <defaultValue>GlobalVariable.authorization</defaultValue>
+      <description></description>
+      <id>b3123278-d501-4774-b3a0-960df2b38d14</id>
+      <masked>false</masked>
+      <name>authorization</name>
+   </variables>
+   <verificationScript>import static org.assertj.core.api.Assertions.*
+
+import com.kms.katalon.core.testobject.ResponseObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webservice.verification.WSResponseManager
+
+import groovy.json.JsonSlurper
+import internal.GlobalVariable as GlobalVariable
+
+ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
+
+def jsonSlurper = new JsonSlurper()
+def jsonResponse = jsonSlurper.parseText(response.getResponseText())
+
+// Verify issue key
+WS.verifyElementPropertyValue(response, 'key', 'KD-1')
+
+// Verify project information
+WS.verifyElementPropertyValue(response, 'fields.project.key', 'KD')
+WS.verifyElementPropertyValue(response, 'fields.project.name', 'Katalon-Demo')
+
+// Verify issue information
+WS.verifyElementPropertyValue(response, 'fields.summary', 'REST - Create new issue using API')
+WS.verifyElementPropertyValue(response, 'fields.description', 'As a User, I want to be able to create a new tickets, so that I can keep track all tasks')
+WS.verifyElementPropertyValue(response, 'fields.issuetype.name', 'Bug')
+
+</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

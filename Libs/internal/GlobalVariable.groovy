@@ -21,7 +21,7 @@ public class GlobalVariable {
 
     static {
         def allVariables = [:]        
-        allVariables.put('default', ['authorization' : 'Basic dG9tOmRmc2tkamZhbHM='])
+        allVariables.put('default', ['authorization' : 'Basic dHJvbmdidWlAa21zLXRlY2hub2xvZ3kuY29tOkJBR1J5QWZ1UmV2dTB4clhkclpMNkVDRA=='])
         
         String profileName = RunConfiguration.getExecutionProfile()
         

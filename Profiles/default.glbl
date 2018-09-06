@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Basic dG9tOmRmc2tkamZhbHM='</initValue>
+      <initValue>'Basic dHJvbmdidWlAa21zLXRlY2hub2xvZ3kuY29tOkJBR1J5QWZ1UmV2dTB4clhkclpMNkVDRA=='</initValue>
       <name>authorization</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
