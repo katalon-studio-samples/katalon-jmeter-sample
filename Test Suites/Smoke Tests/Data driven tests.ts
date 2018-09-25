@@ -4,7 +4,7 @@
    <name>Data driven tests</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-07-03T16:26:08</lastRun>
+   <lastRun>2018-09-24T10:30:33</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>

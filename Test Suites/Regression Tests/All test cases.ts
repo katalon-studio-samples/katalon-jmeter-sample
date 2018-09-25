@@ -4,7 +4,7 @@
    <name>All test cases</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-09-06T17:56:55</lastRun>
+   <lastRun>2018-09-24T10:30:52</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -15,7 +15,7 @@
       <guid>b0ed304a-4aec-41e7-8b9a-c1bb1e2908b5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Simple examples/Verify an issue information</testCaseId>
+      <testCaseId>Test Cases/Simple examples/Get an issue with hard coding Key specified in the URL</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f16fa85d-4dce-4485-ae78-47b941a7a91a</guid>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Verify an issue information</name>
+   <name>Parameterize authentication</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>460787da-fbb1-4d9d-a1eb-bfac187797a6</testCaseGuid>
+   <testCaseGuid>492feee8-9a7f-4c2c-9116-1dd78da9e74a</testCaseGuid>
 </TestCaseEntity>
