@@ -18,7 +18,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>https://katalon.atlassian.net/rest/api/2/issue/${issue_key}?expand=names&amp;fields=summary,status,issuetype,assignee,project,priority,description&amp;=&amp;=</restUrl>
+   <restUrl>https://katalon.atlassian.net/rest/api/2/issue/${issue_key}?expand=names&amp;fields=summary,status,issuetype,assignee,project,priority,description&amp;=&amp;=&amp;=</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

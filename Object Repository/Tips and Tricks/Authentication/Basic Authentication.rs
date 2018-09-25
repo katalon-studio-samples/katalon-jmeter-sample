@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>Search issues by issue key as parameter</name>
+   <name>Basic Authentication</name>
    <tag></tag>
-   <elementGuidId>51530620-7ae8-47f1-b41f-bb4c887cc8a4</elementGuidId>
+   <elementGuidId>d86cadbb-c027-485f-9fe4-2a388f8d1a45</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <httpBody></httpBody>
@@ -29,12 +29,19 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://katalon.atlassian.net/rest/api/2/search?=&amp;=</restUrl>
+   <restUrl>https://katalon.atlassian.net/rest/api/2/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
+   <variables>
+      <defaultValue>'KD-1'</defaultValue>
+      <description></description>
+      <id>e0b786d7-e6f3-4588-8cfe-b8d6630f91fa</id>
+      <masked>false</masked>
+      <name>issue_key</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.ResponseObject
@@ -43,7 +50,6 @@ import com.kms.katalon.core.webservice.verification.WSResponseManager
 
 import groovy.json.JsonSlurper
 import internal.GlobalVariable as GlobalVariable
-
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

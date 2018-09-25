@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>Search issues by issue key as parameter</name>
+   <name>Get Request information</name>
    <tag></tag>
-   <elementGuidId>51530620-7ae8-47f1-b41f-bb4c887cc8a4</elementGuidId>
+   <elementGuidId>fc40c5c3-88b3-4183-9c04-da3dd73452de</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <httpBody></httpBody>
@@ -25,24 +25,68 @@
       <matchCondition>equals</matchCondition>
       <name>Authorization</name>
       <type>Main</type>
-      <value>Basic dHJvbmdidWlAa21zLXRlY2hub2xvZ3kuY29tOkJBR1J5QWZ1UmV2dTB4clhkclpMNkVDRA==</value>
+      <value>${authorization}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://katalon.atlassian.net/rest/api/2/search?=&amp;=</restUrl>
+   <restUrl>https://katalon.atlassian.net/rest/api/2/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
+   <variables>
+      <defaultValue>'KD-1'</defaultValue>
+      <description></description>
+      <id>e0b786d7-e6f3-4588-8cfe-b8d6630f91fa</id>
+      <masked>false</masked>
+      <name>issue_key</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.authorization</defaultValue>
+      <description></description>
+      <id>447abb7d-3b0b-412b-a5b8-5c1a2d6f90e0</id>
+      <masked>false</masked>
+      <name>authorization</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
+import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.testobject.TestObjectProperty
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
-import internal.GlobalVariable as GlobalVariable
+import internal.GlobalVariable
+
+RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
+ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
+
+// Docs: 
+//  - https://api-docs.katalon.com/com/kms/katalon/core/testobject/RequestObject.html
+//  - https://api-docs.katalon.com/com/kms/katalon/core/testobject/TestObjectProperty.html
+
+
+// Verify HTTP Headers
+List&lt;TestObjectProperty> lsObj = request.getHttpHeaderProperties()
+lsObj.each{it -> 
+	
+	println it.getName() + &quot;==>&quot; + it.getValue()
+	
+	String name = it.getName()
+	switch (name) {
+		case 'Content-Type':
+			assertThat(it.getValue()).isEqualTo('application/json')
+			break
+		case 'Authorization':
+			assertThat(it.getValue()).isEqualTo(GlobalVariable.authorization)
+			break
+		default:
+			break
+	}
+}
+
+// Verify HTTP Body
+println request.getBodyContent()
 
 </verificationScript>
    <wsdlAddress></wsdlAddress>

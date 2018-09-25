@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>Parameterize request path</name>
+   <name>Parameterize authorization</name>
    <tag></tag>
-   <elementGuidId>21d01f82-c0dd-4f6f-951a-544b0687ecd5</elementGuidId>
+   <elementGuidId>f97d7020-dff2-48bc-9715-836b1d2f4531</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <httpBody></httpBody>
@@ -18,7 +18,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>https://katalon.atlassian.net/rest/api/2/issue/${issue_key}</restUrl>
+   <restUrl>https://katalon.atlassian.net/rest/api/2/issue/${issue_key}?</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -63,13 +63,6 @@ WS.verifyElementPropertyValue(response, 'fields.project.name', 'Katalon-Demo')
 // Verify issue information
 WS.verifyElementPropertyValue(response, 'fields.summary', 'REST - Create new issue using API')
 WS.verifyElementPropertyValue(response, 'fields.description', 'As a User, I want to be able to create a new tickets, so that I can keep track all tasks')
-WS.verifyElementPropertyValue(response, 'fields.issuetype.name', 'Bug')
-
-HashMap res = response.getHeaderFields();
-println res
-println res.get(&quot;Content-Type&quot;)
-RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
-List&lt;TestObjectProperty> lsObj = request.getHttpHeaderProperties()
-lsObj.each{it -> println it.getName() + &quot;\n&quot; + it.getValue()}</verificationScript>
+WS.verifyElementPropertyValue(response, 'fields.issuetype.name', 'Bug')</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

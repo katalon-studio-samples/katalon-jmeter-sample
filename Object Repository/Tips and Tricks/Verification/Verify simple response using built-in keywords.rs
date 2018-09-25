@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>Parameterize request path</name>
+   <name>Verify simple response using built-in keywords</name>
    <tag></tag>
-   <elementGuidId>21d01f82-c0dd-4f6f-951a-544b0687ecd5</elementGuidId>
+   <elementGuidId>eb3d0be6-5128-4d1f-a190-6a6180756394</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <httpBody></httpBody>
@@ -18,7 +18,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>https://katalon.atlassian.net/rest/api/2/issue/${issue_key}</restUrl>
+   <restUrl>https://katalon.atlassian.net/rest/api/2/issue/${issue_key}?fields=summary,status,issuetype,assignee,project,priority,description</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

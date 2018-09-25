@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>Search issues by issue key as parameter</name>
+   <name>Parameterize request body</name>
    <tag></tag>
-   <elementGuidId>51530620-7ae8-47f1-b41f-bb4c887cc8a4</elementGuidId>
+   <elementGuidId>4334e12e-4a5f-44e5-b80d-f4f168922927</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <httpBody></httpBody>
@@ -25,16 +25,30 @@
       <matchCondition>equals</matchCondition>
       <name>Authorization</name>
       <type>Main</type>
-      <value>Basic dHJvbmdidWlAa21zLXRlY2hub2xvZ3kuY29tOkJBR1J5QWZ1UmV2dTB4clhkclpMNkVDRA==</value>
+      <value>${authorization}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://katalon.atlassian.net/rest/api/2/search?=&amp;=</restUrl>
+   <restUrl>https://katalon.atlassian.net/rest/api/2/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
+   <variables>
+      <defaultValue>'KD-1'</defaultValue>
+      <description></description>
+      <id>e0b786d7-e6f3-4588-8cfe-b8d6630f91fa</id>
+      <masked>false</masked>
+      <name>issue_key</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.authorization</defaultValue>
+      <description></description>
+      <id>d0ebb25b-beae-474c-8e05-b5e42eec3523</id>
+      <masked>false</masked>
+      <name>authorization</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.ResponseObject
@@ -43,7 +57,6 @@ import com.kms.katalon.core.webservice.verification.WSResponseManager
 
 import groovy.json.JsonSlurper
 import internal.GlobalVariable as GlobalVariable
-
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
