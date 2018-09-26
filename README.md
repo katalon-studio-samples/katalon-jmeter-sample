@@ -63,7 +63,20 @@ Additionally, the users can try more advanced test cases and modify as they need
 - How to create test cases that can be reused in different test scenario
 - How to create test cases with BDD mindset
 - How to use built-in keywords together with extended scripts such as assertj to verify the response information.
-- How to group API end-points	 
+- How to group API end-points
+
+### Tips & Tricks
+Tips & Tricks part contains samples solving common questions from users:
+- Parameterize:
+  - Parameterize request body
+  - Parameterize authentication
+  - Parameterize request query
+  - Parameterize request path
+- RequestObject
+- ResponseObject
+- Verification
+- Authentication
+	
 ## Advanced Execution 
 ### Execute an Advanced Test Case
  ![Execute an advance test case](https://github.com/katalon-studio-samples/jira-api-tests/blob/master/Tutorials/Figures/Execute%20an%20advance%20test%20case.png?raw=true)
