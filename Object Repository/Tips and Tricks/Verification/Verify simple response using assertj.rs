@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>Verify simple response using built-in keywords</name>
+   <name>Verify simple response using assertj</name>
    <tag></tag>
-   <elementGuidId>eb3d0be6-5128-4d1f-a190-6a6180756394</elementGuidId>
+   <elementGuidId>7b9619d7-4483-46f8-a481-5a65edac60a6</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <httpBody></httpBody>
@@ -54,16 +54,15 @@ def jsonSlurper = new JsonSlurper()
 def jsonResponse = jsonSlurper.parseText(response.getResponseText())
 
 // Verify issue key
-WS.verifyElementPropertyValue(response, 'key', 'KD-1')
+assertThat(jsonResponse.key).isEqualTo('KD-1')
 
 // Verify project information
-WS.verifyElementPropertyValue(response, 'fields.project.key', 'KD')
-WS.verifyElementPropertyValue(response, 'fields.project.name', 'Katalon-Demo')
+assertThat(jsonResponse.fields.project.key).isEqualTo('KD')
+assertThat(jsonResponse.fields.project.name).isEqualTo('Katalon-Demo')
 
 // Verify issue information
-WS.verifyElementPropertyValue(response, 'fields.summary', 'REST - Create new issue using API')
-WS.verifyElementPropertyValue(response, 'fields.description', 'As a User, I want to be able to create a new tickets, so that I can keep track all tasks')
-WS.verifyElementPropertyValue(response, 'fields.issuetype.name', 'Bug')
-</verificationScript>
+assertThat(jsonResponse.fields.summary).isEqualTo('REST - Create new issue using API')
+assertThat(jsonResponse.fields.description).isEqualTo('As a User, I want to be able to create a new tickets, so that I can keep track all tasks')
+assertThat(jsonResponse.fields.issuetype.name).isEqualTo('Bug')</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

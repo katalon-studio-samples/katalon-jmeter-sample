@@ -4,7 +4,7 @@
    <name>All test cases</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-09-24T10:30:52</lastRun>
+   <lastRun>2018-09-26T18:07:49</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -94,5 +94,53 @@
          <value></value>
          <variableId>87182904-55bf-43a6-aee0-617ff5749c32</variableId>
       </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3d32db3b-f71d-496a-b8d0-58ca7497078d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Tips and Tricks/Parameterize/Parameterize request body</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>b76ea784-19d7-4146-afa7-8f54d8a599ee</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Tips and Tricks/Parameterize/Parameterize authentication</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f691ab60-2979-40e4-a095-b98d0d846df8</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Tips and Tricks/Parameterize/Parameterize request query</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>6ba492a7-3f6e-4237-98a9-27bf2264e4ff</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Tips and Tricks/Parameterize/Parameterize request path</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>391469a2-4159-4d2d-b594-15c9ba5147ca</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Tips and Tricks/RequestObject/Get Request information</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>92d52a38-1af4-481b-933c-b360106760b0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Tips and Tricks/ResponseObject/Get Response information</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1a2ce94d-96a4-44f3-adf2-7f31a95633b2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Tips and Tricks/Verification/Verify simple json response using built-in keywords</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>69636e39-ce5c-43f1-a9f4-486956f56400</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Tips and Tricks/Authentication/Basic Authentication</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
