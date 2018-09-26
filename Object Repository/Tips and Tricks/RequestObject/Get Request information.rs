@@ -29,7 +29,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://katalon.atlassian.net/rest/api/2/search</restUrl>
+   <restUrl>https://katalon.atlassian.net/rest/api/2/search?=</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -51,11 +51,14 @@
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
+import org.stringtemplate.v4.compiler.STParser.namedArg_return
+
 import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.testobject.TestObjectProperty
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
+import groovy.json.JsonSlurper
 import internal.GlobalVariable
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
@@ -86,8 +89,39 @@ lsObj.each{it ->
 }
 
 // Verify HTTP Body
-println request.getBodyContent()
+def jsonSlurper = new JsonSlurper()
 
-</verificationScript>
+String expectedBody = '''{
+    &quot;jql&quot;: &quot;issuekey = KD-1&quot;,
+    &quot;startAt&quot;: 0,
+    &quot;maxResults&quot;: 15,
+    &quot;fields&quot;: [
+        &quot;summary&quot;,
+        &quot;status&quot;,
+        &quot;issuetype&quot;,
+        &quot;assignee&quot;,
+        &quot;project&quot;,
+        &quot;priority&quot;,
+        &quot;description&quot;
+    ]
+}'''
+
+def jsonExpectedBody = jsonSlurper.parseText(expectedBody)
+def jsonResponse = jsonSlurper.parseText(request.getBodyContent().getText())
+
+assertThat(jsonResponse.jql).isEqualTo(jsonExpectedBody.jql)
+assertThat(jsonResponse).isEqualTo(jsonExpectedBody)
+
+// Verify parameters
+List&lt;TestObjectProperty> lsParams = request.getRestParameters()
+lsParams.each {it -> 
+	println it.getName() + &quot;==>&quot; + it.getValue()
+}
+
+// Verify Rest request method
+assertThat(request.getRestRequestMethod()).isEqualTo(&quot;POST&quot;)
+
+// Verify Rest name
+assertThat(request.getName()).isEqualTo(&quot;Get Request information&quot;)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

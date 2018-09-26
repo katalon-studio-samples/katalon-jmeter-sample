@@ -58,11 +58,11 @@ import com.kms.katalon.core.webservice.verification.WSResponseManager
 import groovy.json.JsonSlurper
 import internal.GlobalVariable as GlobalVariable
 
-HashMap res = response.getHeaderFields();
-println res
-println res.get(&quot;Content-Type&quot;)
-RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
-List&lt;TestObjectProperty> lsObj = request.getHttpHeaderProperties()
-lsObj.each{it -> println it.getName() + &quot;\n&quot; + it.getValue()}</verificationScript>
+
+ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
+
+assertThat(response.getContentType()).isEqualTo('application/json;charset=UTF-8')
+assertThat(response.getHeaderFields()['X-AUSERNAME'][0]).isEqualTo('trongbui')
+assertThat(response.isJsonContentType()).isTrue()</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
