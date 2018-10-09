@@ -9,4 +9,19 @@
       <initValue>'Basic dHJvbmdidWlAa21zLXRlY2hub2xvZ3kuY29tOkJBR1J5QWZ1UmV2dTB4clhkclpMNkVDRA=='</initValue>
       <name>authorization</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'KD-1000'</initValue>
+      <name>issue_key</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'KD-1001'</initValue>
+      <name>update_issue_key</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>latest_response</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
