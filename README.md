@@ -110,6 +110,10 @@ From version 5.7, Katalon Studio has suported native BDD Cucumber testing approa
 3. Execute the test suite
 
  ### Execute BDD Cucumber test feature
+ ![Execute a test collection](https://github.com/katalon-studio-samples/jira-api-tests/blob/master/Tutorials/Figures/Execute%20a%20BDD%20Cucumber%20feature.png?raw=true)
+ This example demonstrates how to execute a test suite collection.
+1. Select the Test feature
+2. Execute the Test feature
 
 ## See Also
 Update configurations for integration: [Jira](https://docs.katalon.com/x/7oEw), [Katalon Analytics](https://docs.katalon.com/x/KRhO)
