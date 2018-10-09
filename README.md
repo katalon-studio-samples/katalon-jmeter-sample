@@ -43,8 +43,14 @@ At the end of this README, you will find additional methods to execute automatio
 	    When I send a request to create issue with defined information
 	    Then The issue is created successfully in the system
 ```
-## Test Cases	 
-### Common Test Cases
+## Test Cases	
+    - Simple Test Cases
+    - Advance Test Cases
+    - Data-driven Test Cases
+    - Tips and Tricks Test Cases
+    - BDD Cucumber Test Cases
+
+### Simple Test Cases
 Test cases at this section will help the users to understand:
 - How to create simple API testing with hard coding test data
 - How to create a RESTful Web service object at Object Repository with different method: 
@@ -59,11 +65,15 @@ Test cases at this section will help the users to understand:
 
 ### Advanced Test Cases
 Additionally, the users can try more advanced test cases and modify as they need. The advanced test cases contained in this project are:
-- How to create RESTful Web services object at Object Repository with parameters so that it can be tested with different data set using data-driven approach
-- How to create test cases that can be reused in different test scenario
-- How to create test cases with BDD mindset
-- How to use built-in keywords together with extended scripts such as assertj to verify the response information.
-- How to group API end-points
+- How to create RESTful Web services object at Object Repository with parameters
+- How to pass value from a Web service response to another Web service request
+- How to create RESTful API tests with dynamic test data
+
+### Data-driven Test cases
+Data-driven approach is important to API testing, since it helps users testing a Web service endpoint with different dataset without cloning the test case. Test cases in this section demonstrate:
+- How to create test cases with input parameters
+- How to use data-file in test suites
+- How to execute test cases with data-file as a data-driven approach
 
 ### Tips & Tricks
 Tips & Tricks part contains samples solving common questions from users:
@@ -76,15 +86,14 @@ Tips & Tricks part contains samples solving common questions from users:
 - ResponseObject
 - Verification
 - Authentication
+
+### BDD Cucumber Test Cases
+From version 5.7, Katalon Studio has suported native BDD Cucumber testing approach. The example in this section show:
+- How to create test features
+- How to create test scenario, test scenario out-line
+- How to implement step definition
+- How to execute BDD Cucumber features.
 	
-## Advanced Execution 
-### Execute an Advanced Test Case
- ![Execute an advance test case](https://github.com/katalon-studio-samples/jira-api-tests/blob/master/Tutorials/Figures/Execute%20an%20advance%20test%20case.png?raw=true)
- The advance test cases in this example repository demonstrate how to set up the test project with Page Object Design Pattern approach to reduce the maintenance cost as well as increase the reusability of testing scripts.
-1. Open EXECUTABLE folder
-2. Select the test case you want to execute
-3. Choose the browser for executing the test case
- 
  ### Execute a Test Suite with Data-Driven
  ![Execute a test suite with data-driven](https://github.com/katalon-studio-samples/jira-api-tests/blob/master/Tutorials/Figures/Execute%20a%20test%20suite%20with%20data%20driven.png?raw=true)
  This example demonstrates how to apply data-driven approach to test execution with Katalon Studio. 
@@ -99,6 +108,8 @@ Tips & Tricks part contains samples solving common questions from users:
 1. Select the Test suite
 2. Add test cases into the test suite 
 3. Execute the test suite
+
+ ### Execute BDD Cucumber test feature
 
 ## See Also
 Update configurations for integration: [Jira](https://docs.katalon.com/x/7oEw), [Katalon Analytics](https://docs.katalon.com/x/KRhO)
