@@ -12,7 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
      + Account: trongbui@kms-technology.com/BAGRyAfuRevu0xrXdrZL6ECD
 ### Setting Up
 - [Check out](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) the code from this .git
-- [Open the project](https://docs.katalon.com//display/KD/Manage+Test+Project) from Katalon Studio
+- [Open the project](https://docs.katalon.com/katalon-studio/docs/manage-test-project.html) from Katalon Studio
 ### Executing a Test Case     
 ![Execute a simple test case](https://github.com/katalon-studio-samples/jira-api-tests/blob/master/Tutorials/Figures/Executing%20a%20test%20case.png?raw=true)
 1. Expand the Test Cases structure, where all the test cases are stored.
