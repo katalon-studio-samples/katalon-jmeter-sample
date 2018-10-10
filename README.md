@@ -88,7 +88,7 @@ Tips & Tricks part contains samples solving common questions from users:
 - Authentication
 
 ### BDD Cucumber Test Cases
-From version 5.7, Katalon Studio has suported native BDD Cucumber testing approach. The example in this section show:
+From version 5.7, Katalon Studio has supported native BDD Cucumber testing approach. The example in this section show:
 - How to create test features
 - How to create test scenario, test scenario out-line
 - How to implement step definition
@@ -96,6 +96,7 @@ From version 5.7, Katalon Studio has suported native BDD Cucumber testing approa
 ______
  ### Execute a Test Suite with Data-Driven
  ![Execute a test suite with data-driven](https://github.com/katalon-studio-samples/jira-api-tests/blob/master/Tutorials/Figures/Execute%20a%20test%20suite%20with%20data%20driven.png?raw=true)
+ 
  This example demonstrates how to apply data-driven approach to test execution with Katalon Studio. 
 1. Select the test suite
 2. Select the test case you want to apply data-driven approach
@@ -104,6 +105,7 @@ ______
  
  ### Execute a Test Suite
  ![Execute a test collection](https://github.com/katalon-studio-samples/jira-api-tests/blob/master/Tutorials/Figures/Execute%20a%20test%20suite.png?raw=true)
+ 
  This example demonstrates how to execute a test suite collection.
 1. Select the Test suite
 2. Add test cases into the test suite 
@@ -111,6 +113,7 @@ ______
 
  ### Execute BDD Cucumber test feature
  ![Execute a test collection](https://github.com/katalon-studio-samples/jira-api-tests/blob/master/Tutorials/Figures/Execute%20a%20BDD%20Cucumber%20feature.png?raw=true)
+ 
  This example demonstrates how to execute a test suite collection.
 1. Select the Test feature
 2. Execute the Test feature
