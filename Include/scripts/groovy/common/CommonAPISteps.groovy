@@ -13,7 +13,7 @@ class CommonAPISteps {
 
 	@Given('^The Jira System is available$')
 	def the_jira_system_is_available() {
-		GlobalVariable.latest_response = WS.sendRequest(findTestObject('Object Repository/api-2-serverInfo/Get server info'))
+		GlobalVariable.latest_response = WS.sendRequest(findTestObject('Object Repository/REST examples/Simple examples/api-2-serverInfo/Get server info'))
 		WS.verifyResponseStatusCode(GlobalVariable.latest_response, 200)
 	}
 

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Create a new issue</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8bd0e300-b254-468e-b246-4b6f6099a79d</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>3567abd8-d7c0-42f4-a390-c3971f527db2</id>
+      <masked>false</masked>
+      <name>project_key</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>86795964-5988-4612-a8ca-a7ef43b52c12</id>
+      <masked>false</masked>
+      <name>summary</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>f8d0de43-440f-41f8-88c7-3f222141693c</id>
+      <masked>false</masked>
+      <name>description</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>42041334-0204-4230-bc92-aaf70ff0f38a</id>
+      <masked>false</masked>
+      <name>issue_type</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>93bd618a-dcc3-4535-9ad3-eead7a05fcb2</id>
+      <masked>false</masked>
+      <name>priority</name>
+   </variable>
+</TestCaseEntity>

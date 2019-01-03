@@ -4,7 +4,7 @@
    <name>Data-driven tests</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-10-09T17:30:27</lastRun>
+   <lastRun>2018-11-05T20:35:32</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -15,7 +15,7 @@
       <guid>abfff98e-681a-4b49-af6b-560c249cc8fb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Data-driven examples/Create issue/Create a new issue</testCaseId>
+      <testCaseId>Test Cases/REST examples/Data-driven examples/Create issue/Create a new issue</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>37faab98-1b4f-402b-97d5-2f67afc8381b</id>
@@ -23,7 +23,7 @@
             <iterationType>ALL</iterationType>
             <value></value>
          </iterationEntity>
-         <testDataId>Data Files/Issue information</testDataId>
+         <testDataId>Data Files/Issue Data/Issue information</testDataId>
       </testDataLink>
       <variableLink>
          <testDataLinkId>37faab98-1b4f-402b-97d5-2f67afc8381b</testDataLinkId>
