@@ -36,7 +36,7 @@ public class GlobalVariable {
 
     static {
         def allVariables = [:]        
-        allVariables.put('default', ['authorization' : 'Basic dHJvbmdidWlAa21zLXRlY2hub2xvZ3kuY29tOkJBR1J5QWZ1UmV2dTB4clhkclpMNkVDRA==', 'issue_key' : 'KD-1000', 'update_issue_key' : 'KD-1001', 'latest_response' : ''])
+        allVariables.put('default', ['authorization' : 'Basic ZGVtb0BrYXRhbG9uLmNvbTpWQm5jZXRPU083MEU0TlZMWVFuaDlCMkQ=', 'issue_key' : 'KD-1000', 'update_issue_key' : 'KD-1001', 'latest_response' : ''])
         
         String profileName = RunConfiguration.getExecutionProfile()
         def selectedVariables = allVariables[profileName]

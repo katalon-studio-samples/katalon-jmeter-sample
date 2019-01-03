@@ -29,7 +29,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://katalon.atlassian.net/rest/api/2/search</restUrl>
+   <restUrl>https://katalon.atlassian.net/rest/api/2/search?</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -62,7 +62,7 @@ import internal.GlobalVariable as GlobalVariable
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 assertThat(response.getContentType()).isEqualTo('application/json;charset=UTF-8')
-assertThat(response.getHeaderFields()['X-AUSERNAME'][0]).isEqualTo('trongbui')
+assertThat(response.getHeaderFields()['X-AUSERNAME'][0]).isEqualTo('')
 assertThat(response.isJsonContentType()).isTrue()</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

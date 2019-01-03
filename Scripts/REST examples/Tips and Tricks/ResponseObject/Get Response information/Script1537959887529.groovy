@@ -17,5 +17,5 @@ RequestObject request = findTestObject('REST examples/Tips and Tricks/RequestObj
 //  - https://api-docs.katalon.com/com/kms/katalon/core/testobject/TestObjectProperty.html
 
 assertThat(response.getContentType()).isEqualTo('application/json;charset=UTF-8')
-assertThat(response.getHeaderFields()['X-AUSERNAME'][0]).isEqualTo('trongbui')
+assertThat(response.getHeaderFields()['X-AUSERNAME'][0]).isEqualTo('demo')
 assertThat(response.isJsonContentType()).isTrue()
