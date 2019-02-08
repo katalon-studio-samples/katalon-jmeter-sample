@@ -1,0 +1,23 @@
+plugins {
+  id 'java'
+  id "com.katalon.gradle-plugin" version "0.0.4"
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.apache.jmeter', name: 'ApacheJMeter_core', version: '5.0'
+    // https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_java
+	compile group: 'org.apache.jmeter', name: 'ApacheJMeter_java', version: '5.0'
+	// https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_http
+	compile group: 'org.apache.jmeter', name: 'ApacheJMeter_http', version: '5.0'
+	// https://mvnrepository.com/artifact/de.sstoehr/har-reader
+	compile group: 'de.sstoehr', name: 'har-reader', version: '2.1.2'
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8'
+
+
+
+}

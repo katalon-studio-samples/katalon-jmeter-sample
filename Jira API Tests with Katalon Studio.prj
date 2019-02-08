@@ -3,7 +3,7 @@
    <description></description>
    <name>Jira API Tests with Katalon Studio</name>
    <tag></tag>
-   <UUID>252b8d9a-419e-4612-8c3a-1ffef49172ee</UUID>
+   <UUID>d9eac775-29eb-42d3-8c62-b1efd2207816</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
    <sourceContent>
@@ -24,5 +24,5 @@
          </systemFolderConfiguration>
       </systemFolderList>
    </sourceContent>
-   <type>GENERIC</type>
+   <type>WEBSERVICE</type>
 </Project>
