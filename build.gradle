@@ -7,6 +7,10 @@ repositories {
   mavenCentral()
 }
 
+configurations {
+  compile.exclude group: "org.codehaus.groovy", module: "groovy-all"
+}
+
 dependencies {
     compile group: 'org.apache.jmeter', name: 'ApacheJMeter_core', version: '5.0'
     // https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_java
@@ -17,7 +21,4 @@ dependencies {
 	compile group: 'de.sstoehr', name: 'har-reader', version: '2.1.2'
 	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
 	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8'
-
-
-
 }

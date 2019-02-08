@@ -5,7 +5,10 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
+import java.nio.file.Files
 import java.nio.file.Path
+import java.nio.file.Paths
+import java.util.stream.Collectors
 
 import org.apache.jmeter.config.Arguments
 import org.apache.jmeter.protocol.java.sampler.JavaSamplerClient

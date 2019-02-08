@@ -17,6 +17,7 @@ import org.apache.jorphan.collections.HashTree
 
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint
+import com.kms.katalon.core.configuration.RunConfiguration
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling
@@ -28,91 +29,12 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
 
-public class JMeterKeyword {
+class JMeterKeyword {
 
 	@Keyword
 	def runJMeter() {
 		String directoryPath = RunConfiguration.getReportFolder() + "/requests";
-
-		//JMeter Engine
-		StandardJMeterEngine jmeter = new StandardJMeterEngine();
-
-		//JMeter initialization (properties, log levels, locale, etc)
-		JMeterUtils.loadJMeterProperties("./Include/jmeter-properties/bin/jmeter.properties");
-		JMeterUtils.setJMeterHome("./Include/jmeter-properties");
-		JMeterUtils.initLocale();
-		JMeterUtils.setProperty("output_dir", "./jmeter-report");
-
-		// JMeter Test Plan
-		HashTree testPlanTree = new HashTree();
-
-		// Java Sampler
-		JavaSampler javaSampler = new JavaSampler();
-		javaSampler.setClassname(KatalonSamplerClient.class.getName());
-		javaSampler.setName("Java sampler");
-
-		Arguments args = new Arguments();
-		args.addArgument("REPORT_DIR", reportPath);
-		javaSampler.setArguments(args);
-
-
-
-		// Loop Controller
-		LoopController loopController = new LoopController();
-		loopController.setLoops(1);
-		loopController.setFirst(true);
-		loopController.initialize();
-
-		// Thread Group
-
-		org.apache.jmeter.threads.ThreadGroup threadGroup = new org.apache.jmeter.threads.ThreadGroup();
-		threadGroup.setNumThreads(2);
-		threadGroup.setRampUp(1);
-		threadGroup.setDuration(10000);
-		threadGroup.setScheduler(true);
-		threadGroup.setName("Main Thread Group");
-		threadGroup.setSamplerController(loopController);
-
-		// Test Plan
-		TestPlan testPlan = new TestPlan("Create JMeter Script From Java Code");
-		testPlan.setUserDefinedVariables((Arguments) new ArgumentsPanel().createTestElement());
-
-		// Construct Test Plan from previously initialized elements
-		testPlanTree.add(testPlan);
-		HashTree threadGroupHashTree = testPlanTree.add(testPlan, threadGroup);
-		threadGroupHashTree.add(javaSampler);
-
-
-		//add Summarizer output to get test progress in stdout like:
-		// summary =      2 in   1.3s =    1.5/s Avg:   631 Min:   290 Max:   973 Err:     0 (0.00%)
-		Summariser summer = null;
-		String summariserName = JMeterUtils.getPropDefault("summariser.name", "summary");
-		if (summariserName.length() > 0) {
-			summer = new Summariser(summariserName);
-		}
-
-
-
-
-		// Store execution results into a .jtl file
-		String logFile = "test.csv";
-		ResultCollector logger = new ResultCollector(summer);
-		logger.setFilename(logFile);
-		testPlanTree.add(testPlanTree.getArray()[0], logger);
-
-		// Run Test Plan
-		jmeter.configure(testPlanTree);
-		jmeter.run();
-
-		try {
-			//			ReportGenerator reportGen = new ReportGenerator(logFile, null);
-			//			reportGen.generate();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		System.out.println("Test completed. See test.jtl file for results");
-		System.out.println("Open test.jmx file in JMeter GUI to validate the code");
-		System.exit(0);
+		JMeterRunner runner = new JMeterRunner();
+		runner.run(directoryPath);
 	}
 }
