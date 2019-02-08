@@ -10,6 +10,7 @@ import org.apache.jmeter.control.LoopController
 import org.apache.jmeter.engine.StandardJMeterEngine
 import org.apache.jmeter.protocol.java.sampler.JavaSampler
 import org.apache.jmeter.reporters.ResultCollector
+import org.apache.jmeter.report.dashboard.ReportGenerator
 import org.apache.jmeter.reporters.Summariser
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jmeter.testelement.TestPlan
@@ -28,6 +29,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable
 
 public class JMeterRunner {
+	
+	private static NUM_THREADS = 2;
+	private static RAMP_UP = 1;
+	private static DURATION = 10000;
+	private static JTL_FILE = "jmeter-result.csv";
 
 	public void run(String reportPath) throws IOException {
 		//JMeter Engine
@@ -62,9 +68,9 @@ public class JMeterRunner {
 		// Thread Group
 
 		org.apache.jmeter.threads.ThreadGroup threadGroup = new org.apache.jmeter.threads.ThreadGroup();
-		threadGroup.setNumThreads(2);
-		threadGroup.setRampUp(1);
-		threadGroup.setDuration(10000);
+		threadGroup.setNumThreads(NUM_THREADS);
+		threadGroup.setRampUp(RAMP_UP);
+		threadGroup.setDuration(DURATION);
 		threadGroup.setScheduler(true);
 		threadGroup.setName("Main Thread Group");
 		threadGroup.setSamplerController(loopController);
@@ -91,9 +97,8 @@ public class JMeterRunner {
 
 
 		// Store execution results into a .jtl file
-		String logFile = "test.csv";
 		ResultCollector logger = new ResultCollector(summer);
-		logger.setFilename(logFile);
+		logger.setFilename(JTL_FILE);
 		testPlanTree.add(testPlanTree.getArray()[0], logger);
 
 		// Run Test Plan
@@ -101,8 +106,8 @@ public class JMeterRunner {
 		jmeter.run();
 
 		try {
-			//			ReportGenerator reportGen = new ReportGenerator(logFile, null);
-			//			reportGen.generate();
+			ReportGenerator reportGen = new ReportGenerator(JTL_FILE, null);
+			reportGen.generate();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
